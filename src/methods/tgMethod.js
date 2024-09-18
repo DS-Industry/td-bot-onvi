@@ -34,6 +34,7 @@ class TgMethod {
             parse_mode: "HTML"
         };
         try {
+            console.log(topicId)
             await bot.sendMessage(chatId, messageText, topicId, options);
         } catch (err) {
             console.error('Ошибка при отправке сообщения:', err);

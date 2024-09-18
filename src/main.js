@@ -74,8 +74,8 @@ bot.on('message', async msg => {
                 await tgMethod.sendMessageWithRetry(chatId, 'Я так не понимаю');
 
             } else {
-
-                await tgMethod.sendMessageTopicWithRetry(adminChat, text, client.TG_TOPIC_ID);
+                console.log('topic' + client.TG_TOPIC_ID)
+                await tgMethod.sendMessageTopicWithRetry(adminChat, text, Number(client.TG_TOPIC_ID));
             }
 
 
